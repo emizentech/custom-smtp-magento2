@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="smtp" sortOrder="999" translate="label">
+			<label>SMTP Configuration</label>
+		</tab>
+		<section id="smtp" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<label>smtp</label>
+			<tab>smtp</tab>
+			<resource>Emizen_Smtp::config_emizen_smtp</resource>
+			<group id="configuration" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>Configuration</label>
+				<field id="hostname" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Hostname</label>
+					<validate>required-entry</validate>
+					<comment/>
+				</field>
+				<field id="port" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Port</label>
+					<validate>required-entry</validate>
+					<comment/>
+				</field>
+				<field id="login" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+					<label>Login</label>
+					<validate>required-entry</validate>
+					<comment/>
+				</field>
+				<field id="password" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="password" required='required'>
+					<label>Password</label>
+					<validate>required-entry</validate>
+					<comment/>
+				</field>
+				<field id="ssl" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>SSL/TLS</label>
+					<validate>required-entry</validate>
+					<comment/>
+					<source_model>Emizen\Smtp\Model\Config\Source\Ssl</source_model>
+				</field>
+				
+			</group>
+		</section>
+	</system>
+</config>
